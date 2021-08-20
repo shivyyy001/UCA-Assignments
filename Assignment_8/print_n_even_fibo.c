@@ -40,7 +40,8 @@ long long int print_n_even_fibo(long long int n)
     F(n) = (4 * F(n-3)) + F(n-6) , now we want every third number of fibonacci
     series to be printed hence the equation becomes ->
     
-    F(3) = (4 * F(2)) + F(1) , where F(2) is 8 and F(1) is 2.  */
+    F(3) = (4 * F(2)) + F(1) , where F(2) is 8 and F(1) is 2 , thus more generally ->
+    F(n) = (4 * F(n - 1)) + F(n - 2) .   */
     
     long long int answer = (4 * print_n_even_fibo(n - 1)) + print_n_even_fibo(n - 2);
     return answer;
