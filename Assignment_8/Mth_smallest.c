@@ -109,8 +109,10 @@ int main()
         scanf("%d" , &array[i]);
     }
     
+    // Calling q_sort function to sort the array using quick sort.
     q_sort(array , n , 0 , n - 1);
     
+    // printing the Mth smallest element in array.
     printf("%dth smallest element = %d \n" , m , array[m - 1]);
     
 }
