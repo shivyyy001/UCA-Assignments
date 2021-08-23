@@ -68,7 +68,7 @@ void enqueue_front(int val)
     newNode->prev = NULL;
     
     // if head is NULL ,means size is 0 so just point head and tail to newNode and head's next and prev to NULL.
-    if(head == NULL)
+    if(head == NULL || tail == NULL)
     {
         head = newNode;
         tail = newNode;
@@ -103,7 +103,7 @@ void enqueue_rear(int val)
     newNode->prev = NULL;
     
     // if head is NULL ,means size is 0 so just point head and tail to newNode and head's next and prev to NULL.
-    if(head == NULL)
+    if(head == NULL || tail == NULL)
     {
         head = newNode;
         tail = newNode;
@@ -141,7 +141,10 @@ int dequeue_front()
     struct Node *temp = head;
     int data = head->data;
     head = head->next;
-    head->prev = NULL;
+    if(head != NULL)
+    {
+        head->prev = NULL;
+    }
     
     // decrease the size and free the front node.
     size--;
@@ -165,7 +168,10 @@ int dequeue_rear()
     struct Node *temp = tail;
     int data = tail->data;
     tail = tail->prev;
-    tail->next = NULL;
+    if(tail != NULL)
+    {
+        tail->next = NULL;
+    }
     
     // decrease the size and free the rear node.
     size--;
