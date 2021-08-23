@@ -148,7 +148,8 @@ void free_queue()
     
     size = 0;
     head = NULL;
-    
+    tail = NULL;    
+
     printf("Queue freed \n");
 }
 
