@@ -4,7 +4,7 @@
  * Execution : ./a.out
  *
  * @Shivansh Kaushal ( 1910990128 )  , 23/8/2021
- * Assignment_6 - Linked List.
+ * Ques 1. Assignment_6 - Linked List.
  *
  */
 
@@ -51,10 +51,11 @@ void initialize_stack()
 // Function to push an element into stack using Linked List Node.
 void push(int val)
 {
-    // creating a new linked list node and assigning val to its data.
+    // creating a new linked list node and assigning val to its data and NULL to its next.
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = val;
-    
+    newNode->next = NULL;   
+
     // if head is NULL ,means size is 0 so just point head to newNode and head's next to NULL.
     if(head == NULL)
     {
@@ -143,6 +144,8 @@ void free_stack()
     }
     
     size = 0;
+    head = NULL;
+
     printf("Stack freed \n");
 }
 
