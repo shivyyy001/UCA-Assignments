@@ -23,7 +23,7 @@ int length(struct ListNode *head)
 {
     int count = 0;
     
-    // Traversing the Linked list till head is not NULL to count nodes.
+    // Traversing the Linked list till head is not NULL.
     while(head != NULL)
     {
         count++;
