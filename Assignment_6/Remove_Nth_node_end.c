@@ -37,7 +37,8 @@ struct ListNode* removeNthFromEnd(struct ListNode* head , int n)
         fast = fast->next;
     }
     
-    /* Moving slow and fast pointer by one step till fast's next is not NULL to make sure slow pointer       reaches one node before the nth node from end  */
+    /* Moving slow and fast pointer by one step till fast's next is not NULL to make sure slow pointer
+    reaches one node before the nth node from end  */
     while(fast->next != NULL)
     {
         fast = fast->next;
